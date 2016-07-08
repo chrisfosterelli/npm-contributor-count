@@ -17,11 +17,7 @@ resolve(process.argv[2])
 function resolve(pckg) {
   return new Promise((resolve, reject) => {
     ls.ls(pckg, 'latest', true, list => {
-      const promises = []
-      list.forEach(pckg => {
-        promises.push(getContributors(pckg))
-      })
-      Promise.all(promises)
+      Promise.all(list.map(getContributors))
       .then(sets => _.flatten(sets))
       .then(flattened => _.uniq(flattened))
       .then(contributors => contributors.length)
