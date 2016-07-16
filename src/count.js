@@ -1,4 +1,5 @@
 
+
 /* Count
  * Count the number of contributors a package has
  */
@@ -17,7 +18,11 @@ resolve(process.argv[2])
 function resolve(pckg) {
   return new Promise((resolve, reject) => {
     ls.ls(pckg, 'latest', true, list => {
-      Promise.all(list.map(getContributors))
+      const promises = []
+      list.forEach(pckg => {
+        promises.push(getContributors(pckg))
+      })
+      Promise.all(promises)
       .then(sets => _.flatten(sets))
       .then(flattened => _.uniq(flattened))
       .then(contributors => contributors.length)
@@ -37,3 +42,4 @@ function getContributors(pckg) {
     return users
   })
 }
+
