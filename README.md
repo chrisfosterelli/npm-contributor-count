@@ -40,6 +40,10 @@ You can also use it as a library:
 ```javascript
 const count = require('contributor-count')
 
+const name = 'express'
+const version = 'latest'
+const target = { name, version }
+
 count(target)
 .then(count => console.log('The count is', count))
 .catch(err => console.error('Failed to get count', err))
