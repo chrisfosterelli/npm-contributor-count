@@ -1,6 +1,4 @@
-
-/* Command line script
- */
+#!/usr/bin/env node
 
 const ora = require('ora')
 const count = require('../lib/count')

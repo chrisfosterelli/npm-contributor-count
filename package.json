@@ -1,6 +1,6 @@
 {
   "name": "contributor-count",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Count the number of people with write access to a package",
   "main": "src/lib/count.js",
   "bin": {
