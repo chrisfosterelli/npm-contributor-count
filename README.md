@@ -22,7 +22,7 @@ Usage
 To test all of the dependencies for the package in your local directory:
 
 ```bash
-> contributor-count express
+> contributor-count
 local package has 19 contributors with access to the project or its dependencies
 >
 ```
