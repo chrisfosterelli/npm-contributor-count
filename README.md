@@ -7,22 +7,13 @@ module that those modules import (and so on), can put your project at risk so
 it is important to understand the exposure you are receiving when you add an npm
 package as a dependency to your project. I've writte a bit about this [here].
 
-This package requires a minimum of Node 6, as many ES6 features are used.
-
-Installing
-----------
-
-```bash
-npm install -g contributor-count
-```
-
 Usage
 -----
 
 To test all of the dependencies for the package in your local directory:
 
 ```bash
-> contributor-count
+> npx contributor-count
 local package has 19 contributors with access to the project or its dependencies
 >
 ```
@@ -30,8 +21,8 @@ local package has 19 contributors with access to the project or its dependencies
 To test all of the dependencies for a given package on npm:
 
 ```bash
-> contributor-count express
-express has 51 contributors with access to the project or its dependencies
+> npx contributor-count express
+express has 106 contributors with access to the project or its dependencies
 >
 ```
 
